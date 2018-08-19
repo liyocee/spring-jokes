@@ -15,7 +15,7 @@ public class JokesController {
   @Autowired
   private JokesService jokesService;
 
-  @RequestMapping("/")
+  @RequestMapping({"/", ""})
   public String randomJokes(Model model) {
 
     model.addAttribute("joke", jokesService.randomJoke());
